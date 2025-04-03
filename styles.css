@@ -1,0 +1,183 @@
+body {
+    font-family: 'Italian Sex Party';
+    background: #2e1a47; 
+    color: #00ff00; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.contenedor {
+    background: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    border: 5px solid #ff0000;
+}
+
+h1 {
+    color: #ff0000; 
+    font-size: 32px;
+    text-shadow: 4px 4px #00ff00, -4px -4px #ff00ff;
+    animation: risaTitulo 1s infinite alternate;
+}
+
+@keyframes risaTitulo {
+    0% { transform: rotate(0deg) scale(1); }
+    100% { transform: rotate(3deg) scale(1.1); }
+}
+
+#entradaTarea {
+    width: 80%;
+    padding: 10px;
+    border: 3px solid #ff0000;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background: #222;
+    color: white;
+    text-align: center;
+}
+
+button {
+    background: #00ff00;
+    color: black;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out;
+}
+
+button:hover {
+    background: #ff0000;
+    color: white;
+    transform: scale(1.1);
+}
+
+#listaTareas {
+    list-style: none;
+    padding: 0;
+}
+
+.tarea-item {
+    background: #111;
+    margin: 5px 0;
+    padding: 10px;
+    border-left: 5px solid #00ff00;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    animation: risaTarea 3s infinite alternate;
+}
+
+@keyframes risaTarea {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(2deg); }
+}
+
+.tarea-texto.completada {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.boton-alternar, .boton-eliminar {
+    background: #7700aa;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.boton-alternar:hover {
+    background: #00ff00;
+    color: black;
+    transform: scale(1.2);
+}
+
+.boton-eliminar {
+    background: #ff0000;
+}
+
+.boton-eliminar:hover {
+    background: #990000;
+    transform: scale(1.2);
+}
+
+@keyframes risa {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+h1::after {
+    content: ' JAJAJAJAJAJAJAJA!';
+    display: block;
+    color: #00ff00;
+    font-size: 22px;
+    text-shadow: 2px 2px #ff0000, -2px -2px #ff00ff;
+    animation: risa 0.5s infinite alternate;
+}
+
+@keyframes risasLocas {
+    0% { opacity: 0.2; transform: translateY(0px); }
+    100% { opacity: 1; transform: translateY(-20px); }
+}
+
+body::before, body::after {
+    content: 'HAHAHAHAHAHAHAHAHAHAHA';
+    position: absolute;
+    font-size: 60px;
+    font-weight: bold;
+    opacity: 0.2;
+    animation: risasLocas 2s infinite alternate;
+}
+
+body::before {
+    top: 5%;
+    left: 5%;
+    color: rgba(0, 255, 0, 0.2);
+    transform: rotate(-20deg);
+}
+
+body::after {
+    bottom: 5%;
+    right: 5%;
+    color: rgba(255, 0, 0, 0.2);
+    transform: rotate(20deg);
+}
+
+.risas {
+    position: absolute;
+    font-size: 50px;
+    font-weight: bold;
+    opacity: 0.1;
+    animation: risasLocas 3s infinite alternate;
+}
+
+.risa1 { top: 10%; left: 15%; color: #ff00ff; }
+.risa2 { top: 50%; left: 40%; color: #ff0000; }
+.risa3 { bottom: 20%; right: 10%; color: #00ff00; }
+.risa4 { bottom: 60%; right: 30%; color: #ff9900; }
+.risa5 { top: 30%; right: 50%; color: #0099ff; }
+
+body::before, body::after {
+    content: 'HAHAHAHAHAHAHAHAHAHAHA 🃏';
+}
+
+@font-face {
+    font-family: 'Italian Sex Party';
+    src: url('fonts/Italian Sex Party.ttf');
+}
