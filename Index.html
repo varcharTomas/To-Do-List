@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Tareas</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lista de Tareas</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div class="contenedor">
-        <h1>🃏 Lista de Tareas 🃏</h1>
-        <input type="text" id="entradaTarea" placeholder="Nueva tarea">
-        <button id="botonAgregar">Agregar</button>
-        <ul id="listaTareas"></ul>
-        <button id="botonEliminarCompletadas">Eliminar Completadas</button>
+  <div class="contenedor">
+    <h1>Lista de Tareas</h1>
+
+    <div class="formulario-tarea">
+      <input type="text" id="entradaTarea" placeholder="Escribí tu tarea..." />
+      <button id="botonAgregar">Agregar</button>
     </div>
-    <script src="script.js"></script>
+    
+    <div class="controles">
+      <button id="botonFiltro">Filtro: todas</button>
+      <button id="botonLimpiarCompletadas">Eliminar completadas</button>
+    </div>
+
+    <ul id="listaTareas"></ul>
+
+    <div id="infoRapida" class="info-adicional"></div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

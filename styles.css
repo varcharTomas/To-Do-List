@@ -123,26 +123,15 @@ button:hover {
 }
 
 h1::after {
-    content: ' JAJAJAJAJAJAJAJA!';
     display: block;
     color: #00ff00;
     font-size: 22px;
     text-shadow: 2px 2px #ff0000, -2px -2px #ff00ff;
-    animation: risa 0.5s infinite alternate;
 }
 
 @keyframes risasLocas {
     0% { opacity: 0.2; transform: translateY(0px); }
     100% { opacity: 1; transform: translateY(-20px); }
-}
-
-body::before, body::after {
-    content: 'HAHAHAHAHAHAHAHAHAHAHA';
-    position: absolute;
-    font-size: 60px;
-    font-weight: bold;
-    opacity: 0.2;
-    animation: risasLocas 2s infinite alternate;
 }
 
 body::before {
@@ -159,13 +148,6 @@ body::after {
     transform: rotate(20deg);
 }
 
-.risas {
-    position: absolute;
-    font-size: 50px;
-    font-weight: bold;
-    opacity: 0.1;
-    animation: risasLocas 3s infinite alternate;
-}
 
 .risa1 { top: 10%; left: 15%; color: #ff00ff; }
 .risa2 { top: 50%; left: 40%; color: #ff0000; }
@@ -173,11 +155,23 @@ body::after {
 .risa4 { bottom: 60%; right: 30%; color: #ff9900; }
 .risa5 { top: 30%; right: 50%; color: #0099ff; }
 
-body::before, body::after {
-    content: 'HAHAHAHAHAHAHAHAHAHAHA 🃏';
-}
 
 @font-face {
     font-family: 'Italian Sex Party';
     src: url('fonts/Italian Sex Party.ttf');
 }
+@media (max-width: 600px) {
+    .formulario-tarea,
+    .controles {
+      flex-direction: column;
+    }
+  
+    #botonAgregar,
+    .controles button {
+      width: 100%;
+    }
+  
+    .tarea-item {
+      align-items: stretch;
+    }
+  }
